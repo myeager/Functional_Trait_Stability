@@ -1,0 +1,32 @@
+﻿Common_name,Scientific_name,Family,TL,Feeding_habit,Trophic_group,Prey_type_1,Prey_type_2,prey_1,prey_2,prey_3,prey_4,prey_5,references
+White Mullet,Mugil curema,Mugilidae,2,detritovore,primary consumer,detritus,plants,detritus,algae,zooplankton,,,"Gómez-Canchong et al.,2004"
+Atlantic Menhaden,Brevoortia tyrannus,Clupeidae,2.2,plankton feeding,omnivore,zooplankton,plankton crustaceans,krill,amphipods,copepods,,,"Lewis and Peter, 1994"
+Sheepshead Minnow,Cyprinodon variegatus variegatus,Cyprinodontidae,2.4,detritovore,omnivore,detritus,plants,detritus,algae,cladocera,,,Bowman 2000
+Rainwater Killifish,Lucania parva,Fundulidae,2.8,detritovore,omnivore,zooplankton,plankton crustaceans,copepods,polycheates,detritus,,,Harington and Harington 1961
+White Perch,Morone americana,Moronidae,3.1,plankton feeding,secondary consumer,zooplankton,plankton crustaceans,cladocerans,zooplankton,detritus,amphipods,,"Prout et al., 1990"
+Northern Pipefish,Syngnathus fuscus,Syngnathidae,3.17,plankton feeding,secondary consumer,zooplankton,plankton crustaceans,mysid shrimp,amphipods,zooplankton,,,Bowman 2000
+Atlantic Silverside,Menidia menidia,Atherinopsidae,3.19,plankton feeding,secondary consumer,zooplankton,plankton crustaceans,copepods,mysid shrimp,small squids,marine worms,,Adams 1976
+Goby,Gobiosoma bosci,Gobiidae ,3.2,hunting meiofauna,secondary consumer,zoobenthos,benthic crustaceans,polycheates,amphipods,,,,Bowman 2000
+Fourspine Stickleback,Apeltes quadracus,Gasterosteidae,3.2,hunting meiofauna,secondary consumer,zoobenthos,benthic crustaceans,diatoms,marine worms,,,,"Murdy et a., 1997"
+Spotfin Mojarra,Eucinostomus argenteus,Gerreidae,3.24,hunting meiofauna,secondary consumer,zoobenthos,benthic crustaceans,copepods,amphipods,detritus,,,Austin and Austin 1971
+Atlantic Tomcod,Microgadus tomcod,Gadidae ,3.3,hunting meiofauna,secondary consumer,zoobenthos,benthic crustaceans,copepods,amphipods,,,,Grabe 1978
+Tautog,Tautoga onitis,Labridae ,3.32,hunting meiofauna,secondary consumer,zoobenthos,benthic crustaceans,copepods,shrimp,amphipods,,,Leim and Scott 1966
+Smallmouth Flounder,Etropus microstomus,Paralichthyidae,3.4,hunting meiofauna,secondary consumer,zoobenthos,benthic crustaceans,polycheates,molluscs,,,,Lunardon-Branco Maria and Branco Joaquim 2003
+Alewife,Alosa pseudoharengus,Clupeidae,3.4,plankton feeding,secondary consumer,zooplankton,plankton crustaceans,amphipods,shrimp,,,,Bowman 2000
+Striped Killifish,Fundulus majalis,Fundulidae,3.4,hunting meiofauna,secondary consumer,zoobenthos,benthic crustaceans,polycheates,molluscs,,,,Bowman 2000
+Bay Anchovy,Anchoa mitchilli,Engraulidae,3.46,plankton feeding,secondary consumer,zooplankton,plankton crustaceans,copepods,barnacle larve,,,,"Allen et al., 1995"
+Crevalle Jack,Caranx hippos,Carangidae,3.56,hunting macrofauna,secondary consumer,nekton,finfish,fish,shrimp,seagrass,,,"Gómez-Canchong et al.,2004"
+Northern Kingfish,Menticirrhus saxatilis,Sciaenidae,3.56,hunting macrofauna,secondary consumer,zoobenthos,benthic crustaceans,decapods,fish,polycheates,,,Bowman 2000
+Mummichog,Fundulus heteroclitus,Fundulidae,3.59,hunting meiofauna,secondary consumer,zoobenthos,benthic crustaceans,copepods,polycheates,detritus,,,"Pauly et al., 1989"
+Winter Flounder,Pseudopleuronectes americanus,Pleuronectidae,3.62,hunting meiofauna,secondary consumer,zoobenthos,benthic crustaceans,polycheates,copepods,amphipods,,,Bowman 2000
+Grubby,Myoxocephalus aeneus,Cottidae ,3.7,hunting macrofauna,secondary consumer,zoobenthos,benthic crustaceans,shrimp,amphipods,isopods,,,Laroche 1982
+Cunner,Tautogolabrus adspersus,Labridae ,3.72,hunting macrofauna,secondary consumer,zoobenthos,benthic crustaceans,decapods,molluscs,echinoderms,,,Bowman 2000
+Atlantic Needlefish,Strongylura marina,Belonidae,3.78,hunting macrofauna,secondary consumer,nekton,finfish,small fishes,copepods,shrimps,,,Bowman 2000
+Blueback Herring,Alosa aestivalis,Clupeidae,3.81,plankton feeding,secondary consumer,zooplankton,plankton crustaceans,copepods,barnacle larve,mollusc larvae,jellyfish,,Bowman 2000
+Scup,Stenotomus chrysops,Sparidae,3.82,hunting macrofauna,secondary consumer,nekton,finfish,fish,copepods,eucarids,mollusks,polycheates,Bowman 2000
+Oyster Toadfish,Opsanus tau,Batrachoididae,3.84,hunting macrofauna,secondary consumer,nekton,finfish,fish,shrimp,decapods,,,Adams 1976
+Black Seabass,Centropristis striata,Serranidae,3.89,hunting macrofauna,secondary consumer,zoobenthos,benthic crustaceans,decapods,fish,polycheates,,,Bowman 2000
+Permit,Trachinotus falcatus,Carangidae,3.98,hunting macrofauna,secondary consumer,zoobenthos,benthic crustaceans,molluscs,shrimp,fish,,,"Carr and Adams, 1973"
+Bluespotted Cornetfish,Fistularia commersonii,Fistulariidae,4.48,hunting macrofauna,tertiary consumer,nekton,finfish,fish,,,,,Bowman 2000
+Summer Flounder,Paralichthys dentatus,Paralichthyidae,4.49,hunting macrofauna,tertiary consumer,nekton,finfish,fish,squid,,,,Bowman 2000
+Inshore Lizardfish,Synodus foetens,Synodontidae,4.5,hunting macrofauna,tertiary consumer,nekton,finfish,fish,,,,,Bowman 2000
