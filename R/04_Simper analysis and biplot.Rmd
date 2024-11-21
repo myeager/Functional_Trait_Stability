@@ -25,9 +25,10 @@ library(PNWColors)
 
 here::here()
 #load data
-FT.sums <- read.csv("04_ANCOVA_SIMPER_BIPLOT Analyes/Data/Functional_trait_comm_dat.csv")
-sums <- read.csv("04_ANCOVA_SIMPER_BIPLOT Analyes/Data/Species_comm_dat.csv")
-TL <- read.csv("04_ANCOVA_SIMPER_BIPLOT Analyes/Data/fish_diets.csv")
+FT.sums <- read.csv("/Users/mallarie.yeager/Documents/R_projects/Functional_Trait_Stability/04_ANCOVA_SIMPER_BIPOLT Analyses/Data/Functional_trait_comm_dat.csv")
+sums <- read.csv("/Users/mallarie.yeager/Documents/R_projects/Functional_Trait_Stability/04_ANCOVA_SIMPER_BIPOLT Analyses/Data/Species_comm_dat.csv")
+TL <- read.csv("/Users/mallarie.yeager/Documents/R_projects/Functional_Trait_Stability/04_ANCOVA_SIMPER_BIPOLT Analyses/Data/fish_diets.csv")
+com.dat.fish <- read.csv("/Users/mallarie.yeager/Documents/R_projects/Functional_Trait_Stability/02_Ordination Analysis/Data/com.dat.fish.csv")
 #set color pal
 wes_palettes <- list(
   Darjeeling1 = c("#FF0000", "#00A08A", "#F2AD00", "#F98400", "#5BBCD6"),
