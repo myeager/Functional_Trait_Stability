@@ -25,10 +25,10 @@ library(PNWColors)
 
 here::here()
 #load data
-FT.sums <- read.csv("/Users/mallarie.yeager/Documents/R_projects/Functional_Trait_Stability/04_ANCOVA_SIMPER_BIPOLT Analyses/Data/Functional_trait_comm_dat.csv")
-sums <- read.csv("/Users/mallarie.yeager/Documents/R_projects/Functional_Trait_Stability/04_ANCOVA_SIMPER_BIPOLT Analyses/Data/Species_comm_dat.csv")
-TL <- read.csv("/Users/mallarie.yeager/Documents/R_projects/Functional_Trait_Stability/04_ANCOVA_SIMPER_BIPOLT Analyses/Data/fish_diets.csv")
-com.dat.fish <- read.csv("/Users/mallarie.yeager/Documents/R_projects/Functional_Trait_Stability/02_Ordination Analysis/Data/com.dat.fish.csv")
+FT.sums <- read.csv("04_ANCOVA_SIMPER_BIPOLT Analyses/Data/Functional_trait_comm_dat.csv")
+sums <- read.csv("04_ANCOVA_SIMPER_BIPOLT Analyses/Data/Species_comm_dat.csv")
+TL <- read.csv("04_ANCOVA_SIMPER_BIPOLT Analyses/Data/fish_diets.csv")
+com.dat.fish <- read.csv("02_Ordination Analysis/Data/com.dat.fish.csv")
 #set color pal
 wes_palettes <- list(
   Darjeeling1 = c("#FF0000", "#00A08A", "#F2AD00", "#F98400", "#5BBCD6"),
@@ -981,11 +981,12 @@ com.fit.df$t_col <- ifelse(com.fit.df$pvals < 0.07, 0,
                                         ifelse(com.fit.df$pvals < 0.4, 80, 100)))
 
 #png("/Users/mallarie.yeager/Documents/R_projects/FT Stability/SIMPER analysis/Plots/biplot_species.png", width = 960, height = 960, units = "px")
-
+#jpeg("04_ANCOVA_SIMPER_BIPOLT Analyses/Plots/biplot_species.jpeg", 
+ #    width = 8.5, height = 8.5, units = "cm", res = 600, pointsize = 8)
 plot(coords$MDS1, coords$MDS2,  type = "n", xlab = "nMDS1", xlim = c(-0.4,0.4), ylim = c(-0.3,0.3), ylab = "nMDS2", main = "")
 abline(h = 0, lty = 2)
 abline(v = 0, lty = 2)
-text(col.FT$MDS1, col.FT$MDS2, labels = col.FT$FT,col = col.FT$col, cex = 3)
+text(col.FT$MDS1, col.FT$MDS2, labels = col.FT$FT,col = col.FT$col, cex = 1)
 #text(-0.51,0.3,labels = "(a)")
 #plot(com.fit, col = com.fit.df$col)
 plot(com.fit, col= c(t_col(com.fit.df$col[1], com.fit.df$t_col[1]),
@@ -1009,14 +1010,16 @@ plot(com.fit, col= c(t_col(com.fit.df$col[1], com.fit.df$t_col[1]),
                      t_col(com.fit.df$col[19], com.fit.df$t_col[19]),
                      t_col(com.fit.df$col[20], com.fit.df$t_col[20]),
                      t_col(com.fit.df$col[21], com.fit.df$t_col[21]),
-                     t_col(com.fit.df$col[22], com.fit.df$t_col[22]),
+                     t_col(com.fit.df$col[22], 100),
                      t_col(com.fit.df$col[23], com.fit.df$t_col[23]),
                      t_col(com.fit.df$col[24], com.fit.df$t_col[24]),
                      t_col(com.fit.df$col[25], com.fit.df$t_col[25]),
-                     t_col(com.fit.df$col[26], com.fit.df$t_col[26])), cex = 2.6, lwd = 6)
-
+                     t_col(com.fit.df$col[26], com.fit.df$t_col[26]),
+                     t_col(com.fit.df$col[27], com.fit.df$t_col[27])), 
+                     cex = 0.9, lwd = 6)
+text(-0.155, -0.23, labels = "Striped Killifish", col = com.fit.df$col[22], cex = 0.9)
 legend("topleft", legend = c("Detritovore", "Planktivore", "Hunting Meiofauna", "Hunting Macrofauna"), col = c(as.character("#4E4B6F"), as.character("#835B75"), as.character("#DB9770"), as.character("#F0C186")), 
-       lty = 1, lwd = 3, bty= "n", cex = 1.5)
+       lty = 1, lwd = 3, bty= "n", cex = 0.5)
 #dev.off()
 
 
@@ -1032,17 +1035,64 @@ feed.fit.df$t_col <- ifelse(feed.fit.df$pvals < 0.07, 0,
                                         ifelse(feed.fit.df$pvals < 0.4, 80, 100)))
 
 
-#png("/Users/mallarie.yeager/Documents/R_projects/FT Stability/SIMPER analysis/Plots/biplot_feeding_habit.png", width = 960, height = 960, units = "px")
+#jpeg("04_ANCOVA_SIMPER_BIPOLT Analyses/Plots/biplot_feeding_habit.jpeg", width = 8.5, height = 8.5, units = "cm", res = 400)
 plot(coords$MDS1, coords$MDS2,  type = "n", xlab = "nMDS1", xlim = c(-0.4,0.4), ylim = c(-0.3,0.3), ylab = "nMDS2", main = "")
 abline(h = 0, lty = 2)
 abline(v = 0, lty = 2)
-text(col.FT$MDS1, col.FT$MDS2, labels = col.FT$FT,col = col.FT$col, cex = 3)
+text(col.FT$MDS1, col.FT$MDS2, labels = col.FT$FT,col = col.FT$col)
 plot(feed.fit, col= c(t_col(feed.fit.df$col[1], feed.fit.df$t_col[1]),
                      t_col(feed.fit.df$col[2], feed.fit.df$t_col[2]),
                      t_col(feed.fit.df$col[3], feed.fit.df$t_col[3]),
-                     t_col(feed.fit.df$col[4], feed.fit.df$t_col[4])), cex = 2.6, lwd = 6)
+                     t_col(feed.fit.df$col[4], feed.fit.df$t_col[4])), lwd = 6)
 
 legend("topright", legend = c("Detritovore", "Planktivore", "Hunting Meiofauna", "Hunting Macrofauna"), col = c(as.character("#4E4B6F"), as.character("#835B75"), as.character("#DB9770"), as.character("#F0C186")), 
-       lty = 1, lwd = 3, bty= "n", cex = 1.5)
+       lty = 1, lwd = 3, bty= "n", cex = 0.5)
 #dev.off()
 ```
+
+
+Figure 4 for manuscript
+```{r}
+jpeg("04_ANCOVA_SIMPER_BIPOLT Analyses/Plots/biplot_species.jpeg", 
+     width = 8.5, height = 8.5, units = "cm", res = 600, pointsize = 8)
+plot(coords$MDS1, coords$MDS2,  type = "n", xlab = "nMDS1", xlim = c(-0.4,0.4), ylim = c(-0.3,0.3), ylab = "nMDS2", main = "")
+abline(h = 0, lty = 2)
+abline(v = 0, lty = 2)
+text(col.FT$MDS1, col.FT$MDS2, labels = col.FT$FT,col = col.FT$col, cex = 1)
+#text(-0.51,0.3,labels = "(a)")
+#plot(com.fit, col = com.fit.df$col)
+plot(com.fit, col= c(t_col(com.fit.df$col[1], com.fit.df$t_col[1]),
+                     t_col(com.fit.df$col[2], com.fit.df$t_col[2]),
+                     t_col(com.fit.df$col[3], com.fit.df$t_col[3]),
+                     t_col(com.fit.df$col[4], com.fit.df$t_col[4]),
+                     t_col(com.fit.df$col[5], com.fit.df$t_col[5]),
+                     t_col(com.fit.df$col[6], com.fit.df$t_col[6]),
+                     t_col(com.fit.df$col[7], com.fit.df$t_col[7]),
+                     t_col(com.fit.df$col[8], com.fit.df$t_col[8]),
+                     t_col(com.fit.df$col[9], com.fit.df$t_col[9]),
+                     t_col(com.fit.df$col[10], com.fit.df$t_col[10]),
+                     t_col(com.fit.df$col[11], com.fit.df$t_col[11]),
+                     t_col(com.fit.df$col[12], com.fit.df$t_col[12]),
+                     t_col(com.fit.df$col[13], com.fit.df$t_col[13]),
+                     t_col(com.fit.df$col[14], com.fit.df$t_col[14]),
+                     t_col(com.fit.df$col[15], com.fit.df$t_col[15]),
+                     t_col(com.fit.df$col[16], com.fit.df$t_col[16]),
+                     t_col(com.fit.df$col[17], com.fit.df$t_col[17]),
+                     t_col(com.fit.df$col[18], com.fit.df$t_col[18]),
+                     t_col(com.fit.df$col[19], com.fit.df$t_col[19]),
+                     t_col(com.fit.df$col[20], com.fit.df$t_col[20]),
+                     t_col(com.fit.df$col[21], com.fit.df$t_col[21]),
+                     t_col(com.fit.df$col[22], 100),
+                     t_col(com.fit.df$col[23], com.fit.df$t_col[23]),
+                     t_col(com.fit.df$col[24], com.fit.df$t_col[24]),
+                     t_col(com.fit.df$col[25], com.fit.df$t_col[25]),
+                     t_col(com.fit.df$col[26], com.fit.df$t_col[26]),
+                     t_col(com.fit.df$col[27], com.fit.df$t_col[27])), 
+                     cex = 0.9, lwd = 6)
+text(-0.155, -0.23, labels = "Striped Killifish", col = com.fit.df$col[22], cex = 0.9)
+legend("topleft", legend = c("Detritovore", "Planktivore", "Hunting Meiofauna", "Hunting Macrofauna"), col = c(as.character("#4E4B6F"), as.character("#835B75"), as.character("#DB9770"), as.character("#F0C186")), 
+       lty = 1, lwd = 3, bty= "n", cex = 0.5)
+dev.off()
+
+```
+
