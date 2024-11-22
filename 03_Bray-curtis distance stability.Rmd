@@ -222,7 +222,7 @@ coords$MDS2centroid[coords$Pond == "GH"] <- GH.e.F$GH$center[2]
 ```{r}
 
 
-jpeg("03_Bray Curtis distances_Stability/Plots/Community_vs_Functiontial_trait_stability_plot.jpeg",width = 12, height = 24, units = "cm", res = 600)
+jpeg("03_Bray Curtis distances_Stability/Plots/Community_vs_Functiontial_trait_stability_plot.jpeg",width = 12, height = 24, units = "cm", res = 600, pointsize = 10)
 par(mfrow =c(4,2))
 #1
 par(mar=c(4, 5, 1.5, 0.5))
@@ -255,11 +255,11 @@ for (j in 1:length(ponds)) {
   }
 }
 legend("topright", legend = c("NP", "PP", "PJ", "WP", "GH", "QP"),
-       col = as.character(pal$col), ncol = 2, lwd = 2, lty = 1, bty = "n", cex = 0.45)
+       col = as.character(pal$col), ncol = 2, lwd = 2, lty = 1, bty = "n", cex = 0.5)
 
 legend("bottomright", legend = paste( "Stress = ", round(com.mds$stress,2)),
-       bty = "n", text.col = "grey", cex = 0.75)
-legend(-1.4,0.8, legend = "(a)", bty = "n", cex = 1.2)
+       bty = "n", text.col = "grey")
+legend(-1.4,0.8, legend = "(a)", bty = "n", cex = 1.4)
 
 
 #2
@@ -285,11 +285,11 @@ for (j in 1:length(ponds)) {
   }
 }
 legend("topright", legend = c("NP", "PP", "PJ", "WP", "GH", "QP"),
-       col = as.character(pal$col), ncol = 2, lwd = 2, lty = 1, bty = "n", cex = 0.45)
+       col = as.character(pal$col), ncol = 2, lwd = 2, lty = 1, bty = "n", cex = 0.5)
 
 legend("bottomright", legend = paste( "Stress = ", round(com.mds$stress,2)),
-       bty = "n", text.col = "grey", cex = 0.75)
-legend(-1.4,0.8, legend = "(b)", bty = "n", cex = 1.2)
+       bty = "n", text.col = "grey")
+legend(-1.4,0.8, legend = "(b)", bty = "n", cex = 1.4)
 
 #3
 par(mar=c(4, 5, 1.5, 0.5))
@@ -323,10 +323,10 @@ for (j in 1:length(ponds)) {
   }
 }
 legend("topright", legend = pal$Pond,
-       col = as.character(pal$col), ncol = 2, lwd = 2, lty = 1, bty = "n", cex = 0.45)
+       col = as.character(pal$col), ncol = 2, lwd = 2, lty = 1, bty = "n", cex = 0.5)
 legend("bottomright", legend = paste( "Stress = ", round(FT.mds$stress,2)),
-       bty = "n", text.col = "grey", cex= 0.75)
-legend(-0.53,0.23, legend = "(c)", bty = "n", cex = 1.2)
+       bty = "n", text.col = "grey")
+legend(-0.53,0.23, legend = "(c)", bty = "n", cex = 1.4)
 
 
 #4
@@ -354,24 +354,24 @@ for (j in 1:length(ponds)) {
 }
 
 legend("topright", legend = pal$Pond,
-       col = as.character(pal$col), ncol = 2, lwd = 2, lty = 1, bty = "n", cex = 0.45)
+       col = as.character(pal$col), ncol = 2, lwd = 2, lty = 1, bty = "n", cex = 0.5)
 legend("bottomright", legend = paste( "Stress = ", round(FT.mds$stress,2)),
-       bty = "n", text.col = "grey", cex= 0.75)
-legend(-0.53,0.23, legend = "(d)", bty = "n", cex = 1.2)
+       bty = "n", text.col = "grey")
+legend(-0.53,0.23, legend = "(d)", bty = "n", cex = 1.4)
 
 #5
 summary(mod <- aov(rel_distance ~ Pond, beta.yr_to_centroid_dist ))
 boxplot(beta.yr_to_centroid_dist$rel_distance ~ Pond, beta.yr_to_centroid_dist, col = beta.yr_centroid_mean_pond$col, ylab = "Relative year to centroid distance")
 points(beta.yr_centroid_mean_pond$rel_distance, pch = 16)
-legend(-0.45,1.07, legend = "(e)", bty = "n", cex = 1.2)
-legend("topright", legend = "P = 0.006", bty = "n", cex = 0.75)
+legend(-0.45,1.07, legend = "(e)", bty = "n", cex = 1.4)
+legend("topright", legend = "P = 0.006", bty = "n", cex = 0.8)
 
 #6
 summary(mod <- aov(rel_distance ~ Pond,beta.yr_to_yr_dist ))
 boxplot(beta.yr_to_yr_dist$rel_distance ~ Pond, beta.yr_to_yr_dist, col = beta.yr_yr_mean_pond$col, ylab = "Relative year to year distance")
 points(beta.yr_yr_mean_pond$rel_distance, pch = 16)
-legend(-0.45,1.07, legend = "(f)", bty = "n", cex = 1.2)
-legend("topright", legend = "P = 0.07", bty = "n", cex = 0.75)
+legend(-0.45,1.07, legend = "(f)", bty = "n", cex = 1.4)
+legend("topright", legend = "P = 0.07", bty = "n", cex = 0.8)
 
 #7
 summary(mod <- aov(rel_distance ~ Type, beta.yr_to_centroid_dist ))
@@ -379,8 +379,8 @@ boxplot(beta.yr_to_centroid_dist$rel_distance ~ Type, beta.yr_to_centroid_dist,
         col = c("#506E82", "#768655"), ylab = "Relative year to centroid distance",
         names = c("Species", "Functional Traits"), xlab = "Composition Type")
 points(beta.yr_centroid_mean_type$rel_distance, pch = 16)
-legend(0.2,1.07, legend = "(g)", bty = "n", cex = 1.2)
-legend("bottomleft", legend = "P = 0.028", bty = "n", cex = 0.75)
+legend(0.2,1.07, legend = "(g)", bty = "n", cex = 1.4)
+legend("topright", legend = "P = 0.03", bty = "n", cex = 0.8)
 
 #8
 summary(mod <- aov(rel_distance ~ Type,beta.yr_to_yr_dist ))
@@ -388,8 +388,8 @@ boxplot(beta.yr_to_yr_dist$rel_distance ~ Type, beta.yr_to_yr_dist,
         col = c("#506E82", "#768655"), ylab = "Relative year to year distance",
         names = c("Species", "Functional Traits"), xlab = "Composition Type")
 points(beta.yr_yr_mean_type$rel_distance, pch = 16)
-legend(0.2,1.07, legend = "(h)", bty = "n", cex = 1.2)
-legend("bottomleft", legend = "P = 0.003", bty = "n", cex = 0.75)
+legend(0.2,1.07, legend = "(h)", bty = "n", cex = 1.4)
+legend("topright", legend = "P = 0.003", bty = "n", cex = 0.8)
 dev.off()
 ```
 
